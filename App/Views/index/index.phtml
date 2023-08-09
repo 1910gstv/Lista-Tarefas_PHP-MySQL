@@ -1,0 +1,50 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="col-md-6 left">
+            <div class="row h-100 align-items-center justify-content-center">
+                <h2>Seja bem-vindo ao App Lista Tarefas</h2>
+            </div>
+        </div>
+
+        <div class="col-md-6 right">
+            <div class="row align-items-center justify-content-center mt-5">
+
+                <form method="post" action="/autenticar">
+                    <div class="row">
+                        <div class="col-md-12 mb-2">
+                            <input type="text" class="form-control" name="email" placeholder="E-mail">
+                        </div>
+
+                        <div class="col-md-12 mb-2">
+                            <input type="password" class="form-control" name="senha" placeholder="Senha">
+                        </div>
+
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-dark">Entrar</button>
+                        </div>
+                    </div>
+
+                    <?php if ($this->view->login == 'erro') { ?>
+
+                        <div class="row">
+                            <div class="col">
+                                <span class="text text-danger">*E-mail e/ou senha inválidos</span>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+
+                </form>
+
+            </div>
+
+            <div class="row align-items-center ml-5">
+                <div class="col-md-6">
+                    <small class="mt-5 subtitle">Não possui conta?</small>
+                    <a href="/inscreverse" class="btn btn-light mb-2">Inscrever-se</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

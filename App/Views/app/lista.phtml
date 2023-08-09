@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="task-input">
+    <form method="post" action="/listar_tarefa">
+      <i class="fa-solid fa-bars"></i>
+      <input type="text" placeholder="Adicione uma nova tarefa" name='tarefa' />
+      <button class='btn'>Enviar</button>
+    </form>
+  </div>
+
+  <div class="controls">
+    <div class="filters">
+      <span id="all" class="active"><a href="/lista">Todos</a></span>
+      <span id="pendente"><a href="/lista/acao?acao=recuperarPendentes">Pendente</a></span>
+      <span id="completo"><a href='/lista/acao?acao=recuperarCompletos'>Completos</a></span>
+    </div>
+    <a class='clear-btn' href='/lista/acao?acao=removerTudo'>Limpar tudo</a>
+  </div>
+  <ul class="task-box">
+    <?php foreach ($this->view->tarefas as $indice => $tarefa) { ?>
+
+      <li class="task">
+        <label for="<?= $tarefa['id'] ?>">
+          <input type="checkbox" id="checkbox" onclick="marcarRealizada(this, <?= $tarefa['id'] ?>)">
+          <?php if ($tarefa['id_status'] == 2) { ?>
+            <p class='checked'>
+              <?= $tarefa['tarefa'] ?>
+            </p>
+            <i class="ml-3 fa-solid fa-check"></i>
+          <?php } else { ?>
+            <?= $tarefa['tarefa'] ?>
+          <?php } ?>
+        </label>
+
+        <div class="settings">
+          <i onclick="showMenu(this)" class="fa-solid fa-ellipsis"></i>
+          <ul class="task-menu">
+
+            <?php if ($tarefa['id_usuario'] == $_SESSION['id']) { ?>
+              <li onclick="editar(<?= $tarefa['id'] ?>, '<?= $tarefa['tarefa'] ?>')">
+                <i class="fa-solid fa-pen"></i>Editar
+              </li>
+
+              <form method="post" action="/lista/acao?acao=remover&id=<?= $tarefa['id'] ?>">
+                <button type="submit">
+                  <li><i class="fa-solid fa-trash"></i>Excluir</li>
+                </button>
+              </form>
+            <?php } ?>
+
+          </ul>
+        </div>
+      </li>
+
+    <?php } ?>
+
+  </ul>
+</div>
+
+<script>
+
+</script>
