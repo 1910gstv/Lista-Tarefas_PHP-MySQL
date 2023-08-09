@@ -11,6 +11,7 @@
 
 body {
   background: #da0037;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -191,5 +192,21 @@ li {
 }
 
 .right {
-    height: 100%;
+    background-color: #bfbfbf;
+    justify-content: center;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  transition: .3s;
+}
+
+.btn-black:hover {
+  background-color: #313131;
+  color: #fff;
+}
+
+small{
+  font-weight: 700;
 }

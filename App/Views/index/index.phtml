@@ -7,43 +7,47 @@
         </div>
 
         <div class="col-md-6 right">
-            <div class="row align-items-center justify-content-center mt-5">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-md-10">
+                    <form method="post" action="/autenticar">
+                        <div class="row align-items-center">
+                            <div class="col-md-12 mb-2">
+                                <input type="text" class="form-control" name="email" placeholder="E-mail">
+                            </div>
 
-                <form method="post" action="/autenticar">
-                    <div class="row">
-                        <div class="col-md-12 mb-2">
-                            <input type="text" class="form-control" name="email" placeholder="E-mail">
-                        </div>
+                            <div class="col-md-12 mb-2">
+                                <input type="password" class="form-control" name="senha" placeholder="Senha">
+                            </div>
 
-                        <div class="col-md-12 mb-2">
-                            <input type="password" class="form-control" name="senha" placeholder="Senha">
-                        </div>
-
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-dark">Entrar</button>
-                        </div>
-                    </div>
-
-                    <?php if ($this->view->login == 'erro') { ?>
-
-                        <div class="row">
-                            <div class="col">
-                                <span class="text text-danger">*E-mail e/ou senha inválidos</span>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-dark">Entrar</button>
                             </div>
                         </div>
 
-                    <?php } ?>
+                        <?php if ($this->view->login == 'erro') { ?>
 
-                </form>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="text text-danger">*E-mail e/ou senha inválidos</span>
+                                </div>
+                            </div>
 
-            </div>
+                        <?php } ?>
 
-            <div class="row align-items-center ml-5">
-                <div class="col-md-6">
-                    <small class="mt-5 subtitle">Não possui conta?</small>
-                    <a href="/inscreverse" class="btn btn-light mb-2">Inscrever-se</a>
+                    </form>
+
+                    <div class="row mt-4">
+                        <div class="col d-flex flex-column">
+                            <small class="subtitle">Não possui conta?</small>
+                            <a href="/inscreverse" class="btn btn-black">Inscrever-se</a>
+                        </div>
+                    </div>
                 </div>
+
+
+
             </div>
+
 
         </div>
     </div>
