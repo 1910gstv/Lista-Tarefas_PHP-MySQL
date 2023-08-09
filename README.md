@@ -47,7 +47,7 @@ Importante ressaltar que esse além de todos mecanismos citados acima, também f
 Para acelerar o processo e poder focar no Back-End, a parte visual da plataforma, utilizei protótipos que já tinha de projetos anteriores.
 
 ### ✨ Considerações
-Foi um projeto bastante desafiador para mim, uma vez que fiz praticamente tudo do zero, apenas olhando projetos anteriores e tentando reproduzir o que já havia feito antes, e isso me possibilitou entender muitas coisas sobre o conteúdo de programação, como o próprio sistema de rotas.
+Foi um projeto bastante desafiador para mim, uma vez que fiz praticamente tudo do zero, apenas olhando projetos anteriores e tentando reproduzir o que já havia feito antes, e isso me possibilitou entender muitas coisas sobre o conteúdo de programação, como o próprio sistema de rotas, mas principalmente operações CRUD.
 
 ## 
 ⌨ com 🤍 por [Gustavo Henrique](https://github.com/1910gstv)
